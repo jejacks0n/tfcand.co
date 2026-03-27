@@ -87,7 +87,27 @@
 
     h2#tfc-possible-meanings {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4em;
       transition: filter 0.5s ease, opacity 0.5s ease, color 0.5s ease;
+    }
+
+    h2#tfc-possible-meanings .tfc-dot {
+      display: none;
+    }
+
+    @media (min-width: 480px) {
+      h2#tfc-possible-meanings {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+      }
+
+      h2#tfc-possible-meanings .tfc-dot {
+        display: inline;
+      }
     }
 
     h2#perpetually-evolving {
@@ -190,33 +210,35 @@
   requestAnimationFrame(animateLightSources)
 
   const display = document.getElementById('tfc-possible-meanings')
-  const tfcPossibleMeanings = [
-    'Total · Functional · Complexity',
-    'Tactical · Frontier · Catalyst',
-    'Transcendental · Flow · Consensus',
-    'Targeted · Friction · Calibration',
-    'Technical · Foundation · Core',
-    'Theoretical · Future · Capacity',
-    'Transversal · Framework · Connectivity',
-    'Total · Fluidity · Constant',
-    'Transformative · Functional · Cohesion',
-    'Timeless · Functional · Continuity',
-    'Technically · Fantastic · Code',
-  ]
-  let index = 0
+
+  const tWords = ['Total', 'Tactical', 'Transcendental', 'Targeted', 'Technical', 'Theoretical', 'Transversal', 'Transformative', 'Timeless']
+  const fWords = ['Functional', 'Frontier', 'Flow', 'Friction', 'Foundation', 'Future', 'Framework', 'Fluidity', 'Fantastic']
+  const cWords = ['Complexity', 'Catalyst', 'Consensus', 'Calibration', 'Core', 'Capacity', 'Connectivity', 'Constant', 'Cohesion', 'Continuity', 'Code']
+
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)]
+  }
+
+  function renderPhrase() {
+    const words = [pick(tWords), pick(fWords), pick(cWords)]
+    display.innerHTML = words.map((w, i) =>
+      `<span class="tfc-word">${w}</span>${i < 2 ? '<span class="tfc-dot">&nbsp;·&nbsp;</span>' : ''}`
+    ).join('')
+  }
 
   function updateTfcPossibleMeanings() {
     display.classList.add('blur')
     display.classList.remove('focus')
 
     setTimeout(() => {
-      index = (index + 1) % tfcPossibleMeanings.length
-      display.textContent = tfcPossibleMeanings[index]
-      display.style.color = index % 2 === 0 ? 'var(--gold)' : 'var(--copper)'
+      renderPhrase()
       display.classList.remove('blur')
       display.classList.add('focus')
     }, 500)
   }
+
+  renderPhrase()
+  display.classList.add('focus')
   setInterval(updateTfcPossibleMeanings, 4500)
 
   const soon = new Date()
