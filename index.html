@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFC & Co. LLC</title>
+  <meta name="description" content="Total Functional Complexity · Coming Soon">
+
+  <meta property="og:site_name" content="TFC & Co. LLC">
+  <meta property="og:title" content="TFC & Co. LLC">
+  <meta property="og:description" content="Total Functional Complexity · Coming Soon">
+  <meta property="og:image" content="https://tfcand.co/og-image.png">
+  <meta property="og:url" content="https://tfcand.co">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TFC & Co. LLC">
+  <meta name="twitter:description" content="Total Functional Complexity · Coming Soon">
+  <meta name="twitter:image" content="https://tfcand.co/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Cinzel:wght@300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      background-color: #17304b;
+      --gold: #dec06c;
+      --rosegold: #CC9B61;
+      --copper: #c47e55;
+      --white: #f0ece4;
+    }
+
+    body {
+      color: var(--gold);
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #logo-wrapper {
+      container-type: inline-size;
+      width: min(45vh, 85vw);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      filter:
+        drop-shadow(0 0 1px rgba(0, 0, 0, 0.3))
+        drop-shadow(0 0 9px rgba(196, 126, 85, 0.25));
+    }
+
+    h1 {
+      margin-top: 1.5rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 10cqw;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-align: center;
+      white-space: nowrap;
+      color: var(--white);
+      filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.5))
+    }
+
+    hr {
+      width: min(45vh, 85vw);
+      border: none;
+      opacity: 0.4;
+      margin: 1rem 0;
+      border-top: 1px solid var(--copper);
+    }
+
+    h2 {
+      margin-top: 1rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--copper);
+    }
+
+    h2#tfc-possible-meanings {
+      padding: 20px;
+      transition: filter 0.5s ease, opacity 0.5s ease, color 0.5s ease;
+    }
+
+    h2#perpetually-evolving {
+      font-family: 'Cinzel', serif;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      color: var(--white);
+    }
+
+    h2.blur {
+      filter: blur(12px);
+      opacity: 0;
+    }
+
+    h2.focus {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div id="logo-wrapper">
+  <svg id="logo" width="100%" height="100%" viewBox="0 0 1740 728" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <filter id="gold-filter" filterUnits="userSpaceOnUse" x="0" y="0" width="1740" height="728">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="120" result="blur"/>
+        <feSpecularLighting surfaceScale="20" specularConstant="1.5" specularExponent="9" lighting-color="#ffffff" in="blur" result="spec">
+          <fePointLight id="logo-light-gold" x="400" y="200" z="200"/>
+        </feSpecularLighting>
+        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specOut"/>
+        <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+      </filter>
+
+      <filter id="copper-filter" filterUnits="userSpaceOnUse" x="0" y="0" width="1740" height="728">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="120" result="blur"/>
+        <feSpecularLighting surfaceScale="20" specularConstant="1.2" specularExponent="9" lighting-color="#ffd5bc" in="blur" result="spec">
+          <fePointLight id="logo-light-copper" x="1200" y="400" z="200"/>
+        </feSpecularLighting>
+        <feComposite in="spec" in2="SourceAlpha" operator="in" result="specOut"/>
+        <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+      </filter>
+    </defs>
+    <path filter="url(#copper-filter)" style="fill:var(--copper)" d="M1496.485,294.061C1462.882,264.309 1418.556,246.215 1370,246.215C1265.136,246.215 1180,330.609 1180,434.559C1180,538.509 1265.136,622.904 1370,622.904C1432.828,622.904 1488.574,592.609 1523.172,545.964L1602.317,617.135C1546.385,684.165 1460.823,727.059 1365,727.059C1196.666,727.059 1060,594.685 1060,431.637C1060,268.589 1196.666,136.215 1365,136.215C1419.523,136.215 1470.723,150.102 1515.033,174.42L1612.066,77.388L1576.341,41.663L1739.975,0L1700,165.322L1662.587,127.909L1573.969,216.527L1573.995,216.551L1496.485,294.061ZM1588.872,232.293L1601.226,244.647L1523.831,322.042L1511.477,309.688L1588.872,232.293Z"/>
+    <path filter="url(#copper-filter)" style="fill:var(--copper)" d="M592,459.215L532,459.215L472,556.215L425.085,556.215C421.149,565.049 412.289,571.215 402,571.215C388.059,571.215 376.741,559.897 376.741,545.956C376.741,532.016 388.059,520.698 402,520.698C412.489,520.698 421.493,527.105 425.309,536.215L462,536.215L522,438.715L592,438.715L592,459.215ZM592,438.715L592,143.215L1026,143.215L1026,251.215L722,251.215L722,396.215L992,396.215L992,503.215L722,503.215L722,722.215L592,722.215L592,459.215L784.878,459.215C788.917,467.79 797.641,473.732 807.741,473.732C821.682,473.732 833,462.414 833,448.473C833,434.533 821.682,423.215 807.741,423.215C797.076,423.215 787.945,429.84 784.244,439.195L592,438.715ZM402,556.215C407.519,556.215 412,551.734 412,546.215C412,540.696 407.519,536.215 402,536.215C396.481,536.215 392,540.696 392,546.215C392,551.734 396.481,556.215 402,556.215Z"/>
+    <path filter="url(#gold-filter)" style="fill:var(--gold)" d="M0,143.215L504,143.215L504,251.215L317,251.215L317,722.215L187,722.215L187,251.215L0,251.215L0,143.215Z"/>
+    <path filter="url(#copper-filter)" style="fill:var(--rosegold)" d="M834.006,306.228C864.889,306.309 1031.467,306.733 1032,306.215C1034.572,303.716 1050.725,256.247 1092.87,205.644C1144.838,143.246 1214.019,119.804 1226,115.673C1231.08,113.921 1235.247,112.316 1235.247,112.316L0,112.215L0,92.215L1342,92.215C1342,92.215 1342.179,112.191 1342,112.215C1305.776,117.107 1125.038,123.14 1050.268,314.706C1048.785,318.505 1046,326.215 1046,326.215L834,326.215C830.123,335.187 821.19,341.473 810.801,341.473C796.861,341.473 785.543,330.155 785.543,316.215C785.543,302.274 796.861,290.956 810.801,290.956C821.195,290.956 830.131,297.248 834.006,306.228ZM811,326.215C816.519,326.215 821,321.734 821,316.215C821,310.696 816.519,306.215 811,306.215C805.481,306.215 801,310.696 801,316.215C801,321.734 805.481,326.215 811,326.215Z"/>
+  </svg>
+  <h1>TFC &amp; CO LLC</h1>
+</div>
+<hr>
+<h2 id="tfc-possible-meanings">Total · Functional · Complexity</h2>
+<h2 id="perpetually-evolving"></h2>
+
+<script>
+  const container = document.getElementById('logo')
+  const gLight = document.getElementById('logo-light-gold')
+  const cLight = document.getElementById('logo-light-copper')
+
+  let mouseX = null, mouseY = null
+  let leaveX = 870, leaveY = 364, leaveTime = 0
+  let currentX = 870, currentY = 364
+
+  container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect()
+    mouseX = ((e.clientX - rect.left) / rect.width) * 1740
+    mouseY = ((e.clientY - rect.top) / rect.height) * 728
+  })
+
+  container.addEventListener('mouseleave', () => {
+    leaveX = currentX
+    leaveY = currentY
+    leaveTime = performance.now()
+    mouseX = null
+    mouseY = null
+  })
+
+  function animateLightSources(t) {
+    let targetX, targetY
+    if (mouseX !== null) {
+      targetX = mouseX
+      targetY = mouseY
+    } else {
+      const dt = t - leaveTime
+      targetX = leaveX + 500 * Math.sin(dt * 0.00023)
+      targetY = leaveY + 200 * Math.sin(dt * 0.00017)
+    }
+
+    currentX += (targetX - currentX) * 0.08
+    currentY += (targetY - currentY) * 0.08
+
+    gLight.setAttribute('x', String(currentX))
+    gLight.setAttribute('y', String(currentY))
+    cLight.setAttribute('x', String(currentX))
+    cLight.setAttribute('y', String(currentY))
+    requestAnimationFrame(animateLightSources)
+  }
+
+  requestAnimationFrame(animateLightSources)
+
+  const display = document.getElementById('tfc-possible-meanings')
+  const tfcPossibleMeanings = [
+    'Total · Functional · Complexity',
+    'Tactical · Frontier · Catalyst',
+    'Transcendental · Flow · Consensus',
+    'Targeted · Friction · Calibration',
+    'Technical · Foundation · Core',
+    'Theoretical · Future · Capacity',
+    'Transversal · Framework · Connectivity',
+    'Total · Fluidity · Constant',
+    'Transformative · Functional · Cohesion',
+    'Timeless · Functional · Continuity',
+    'Technically · Fantastic · Code',
+  ]
+  let index = 0
+
+  function updateTfcPossibleMeanings() {
+    display.classList.add('blur')
+    display.classList.remove('focus')
+
+    setTimeout(() => {
+      index = (index + 1) % tfcPossibleMeanings.length
+      display.textContent = tfcPossibleMeanings[index]
+      display.style.color = index % 2 === 0 ? 'var(--gold)' : 'var(--copper)'
+      display.classList.remove('blur')
+      display.classList.add('focus')
+    }, 500)
+  }
+  setInterval(updateTfcPossibleMeanings, 4500)
+
+  const soon = new Date()
+  soon.setMonth(soon.getMonth() + 2)
+  document.getElementById('perpetually-evolving').textContent =
+    "Coming " + soon.toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+</script>
+</body>
+</html>
