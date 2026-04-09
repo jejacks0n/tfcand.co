@@ -217,12 +217,16 @@
   const fWords = ['Functional', 'Frontier', 'Flow', 'Friction', 'Foundation', 'Future', 'Framework', 'Fluidity', 'Fantastic']
   const cWords = ['Complexity', 'Catalyst', 'Consensus', 'Calibration', 'Core', 'Capacity', 'Connectivity', 'Constant', 'Cohesion', 'Continuity', 'Code']
 
-  function pick(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
+  let prevWords = [null, null, null]
+
+  function pick(arr, exclude) {
+    const filtered = arr.filter(w => w !== exclude)
+    return filtered[Math.floor(Math.random() * filtered.length)]
   }
 
   function renderPhrase() {
-    const words = [pick(tWords), pick(fWords), pick(cWords)]
+    const words = [pick(tWords, prevWords[0]), pick(fWords, prevWords[1]), pick(cWords, prevWords[2])]
+    prevWords = words
     display.innerHTML = words.map((w, i) =>
       `<span class="tfc-word">${w}</span>${i < 2 ? '<span class="tfc-dot">&nbsp;·&nbsp;</span>' : ''}`
     ).join('')
